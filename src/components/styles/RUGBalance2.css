@@ -1,0 +1,441 @@
+.home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+ }
+ 
+ 
+ .startup {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+   
+     flex-direction: column;
+    
+ }
+ 
+ .startup h1 {
+     color: white;
+     font-size: 3.4rem;
+     font-weight: 800;
+ }
+ 
+ .startup .startup_blue {
+     color: #6163ff;
+ }
+ 
+ .startup h2 {
+     color: #9ca9b3;
+     width: 60%;
+     text-align: center;
+     font-weight: 400;
+ }
+ 
+ .button_group {
+  
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1.5rem;
+ }
+ 
+ .button_group .blue {
+     background: #6163ff;
+     padding: .7rem 2rem;
+     color: #fff;
+     cursor: pointer;
+     border: none;
+     outline: none;
+     font-weight: 500;
+     font-size: 1.2rem;
+     border-radius: 2px;
+     transition: .2s ease-in;
+ }
+ 
+ .button_group .blue:hover {
+     background: #6f71f1;
+ 
+ }
+ 
+ .button_group .gray {
+     background: #2c2d2e;
+     padding: .7rem 2rem;
+     color: #fff;
+     cursor: pointer;
+     border: none;
+     font-weight: 500;
+     outline: none;
+     font-size: 1.2rem;
+     border-radius: 2px;
+     transition: .2s ease-in;
+ }
+ 
+ .button_group .gray:hover {
+     background: #2f3336;
+ }
+ 
+ .vedio {
+     margin-top: 3rem;
+     width: 72%;
+     height: 100%;
+ }
+ 
+ .workflow {
+     margin-top: 6rem;
+     display: grid;
+     width: 100%;
+     grid-template-columns: repeat(3, 1fr);
+     row-gap: 3rem;
+ 
+     border-bottom: 1px solid #9ca9b313;
+     padding-bottom: 3rem;
+ }
+ 
+ .border_B {
+     border-bottom: 1px solid #9ca9b313;
+     padding-bottom: 3rem;
+ }
+ 
+ .workflow_item {
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: .8rem;
+     flex-direction: column;
+ }
+ 
+ .workflow_item h2 {
+     color: #fff;
+     font-size: 1.7rem;
+     font-weight: 700;
+ }
+ 
+ .workflow_item p {
+     color: #9ca9b3;
+     font-size: 1rem;
+     width: 80%;
+ }
+ 
+ .workflow .icons_div {
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+ }
+ 
+ .workflow .icons {
+     background: #6163ff;
+ 
+     border-radius: 50%;
+     color: white;
+     width: 65px;
+     height: 65px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .icon {
+     height: 1.4rem;
+     width: 1.4rem;
+     color: white;
+ }
+ 
+ .workflow_img_right {
+     margin: 5rem 0;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 2rem;
+     width: 100%;
+     align-items: center;
+ }
+ 
+ .lightning {
+     display: flex;
+     flex-direction: column;
+     gap: .6rem;
+ }
+ 
+ .lightning h2 {
+     font-size: 2rem;
+     font-weight: 700;
+     color: white;
+ }
+ 
+ .lightning .blue {
+     color: #595cfc;
+     font-size: .9rem;
+ 
+ }
+ 
+ .lightning .gray {
+     color: #9ca9b3;
+     font-size: 1.3rem;
+ }
+ 
+ .testimonials {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 2rem;
+     margin-top: 5rem;
+ }
+ 
+ .testimonials .test_items {
+     background: #25282c;
+     padding: 1.5rem;
+     border-radius: 3px;
+ }
+ 
+ .testimonials p {
+     color: #9ca9b3;
+     font-size: 1.3rem;
+ }
+ 
+ .layout {
+     background: #595cfc;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 4rem 2rem;
+     border-radius: 2px;
+     margin: 5rem 0;
+     width: 100%;
+ }
+ 
+ .layout h2 {
+     font-size: 2rem;
+     color: white;
+     font-weight: 700;
+ }
+ 
+ .input_cotnainer {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .input_cotnainer input {
+     border: none;
+     outline: none;
+     background: white;
+     padding: .8rem;
+     color: gray;
+ }
+ 
+ .icons_con {
+     padding: .8rem;
+     color: #595cfc;
+     background: #fff;
+ }
+ 
+ 
+ .footer_container {
+     display: flex;
+     align-content: center;
+     justify-content: space-between;
+     padding: 0 15px;
+     flex-wrap: wrap;
+     gap: 20px;
+ }
+ .footer_left{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+ }
+ .footer_right{
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+     align-items: right;
+     justify-content: right;
+ }
+ .footer_icon{
+     display: flex;
+     align-items: center;
+     gap: 20px;
+     color: #595cfc;
+ }
+ .footer_s_icon{
+     cursor: pointer;
+     height: 20px;
+     width: 20px;
+ }
+ .footer_items{
+     display: flex;
+     align-items: center;
+     gap: 20px;
+ }
+ .footer_items a{
+     color: gray;
+     font-weight: 600;
+ }
+ /* responsive  */
+ @media only screen and (min-width: 1025px) {
+     .container {
+         width: 1140px;
+     }
+ }
+ 
+ 
+ @media only screen and (max-width: 768px) {
+     .container {
+         width: 720px;
+     }
+ 
+     .startup h1 {
+         color: white;
+         font-size: 3rem;
+         font-weight: 800;
+         width: 100%;
+         text-align: center;
+     }
+ 
+     .testimonials {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 2rem;
+         margin-top: 5rem;
+ 
+     }
+ 
+ 
+ }
+ 
+ @media only screen and (max-width: 600px) {
+     .container {
+         width: 590px;
+     }
+ 
+     .startup h1 {
+         color: white;
+         font-size: 3rem;
+         font-weight: 800;
+         width: 100%;
+         text-align: center;
+     }
+ 
+     .testimonials {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 2rem;
+         margin-top: 5rem;
+ 
+     }
+ 
+     .workflow {
+         margin-top: 6rem;
+         display: grid;
+         width: 100%;
+         grid-template-columns: repeat(2, 1fr);
+         row-gap: 3rem;
+ 
+         border-bottom: 1px solid #9ca9b313;
+         padding-bottom: 3rem;
+     }
+ 
+     .workflow_img_right {
+         margin: 5rem 0;
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 2rem;
+         width: 100%;
+         align-items: center;
+     }
+ 
+ 
+ }
+ 
+ @media only screen and (max-width: 500px) {
+     .container {
+         width: 98%;
+     }
+ 
+     .startup h1 {
+         color: white;
+         font-size: 2rem;
+         font-weight: 800;
+         width: 100%;
+         text-align: center;
+     }
+ 
+     .startup h2 {
+         font-size: 1rem;
+         width: 100%;
+     }
+ 
+     .testimonials {
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 2rem;
+         margin-top: 5rem;
+ 
+     }
+ 
+     .workflow {
+         margin-top: 6rem;
+         display: grid;
+         width: 100%;
+         grid-template-columns: 1fr;
+         row-gap: 3rem;
+ 
+         border-bottom: 1px solid #9ca9b313;
+         padding-bottom: 3rem;
+     }
+ 
+     .workflow_img_right {
+         margin: 5rem 0;
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 2rem;
+         width: 100%;
+         align-items: center;
+     }
+ 
+     .button_group .blue {
+         background: #6163ff;
+         padding: .5rem 1.5rem;
+         color: #fff;
+         cursor: pointer;
+         border: none;
+         outline: none;
+         font-weight: 500;
+         font-size: 1rem;
+         border-radius: 2px;
+         transition: .2s ease-in;
+     }
+ 
+     .button_group .gray {
+         background: #2c2d2e;
+         padding: .5rem 1.5rem;
+         color: #fff;
+         cursor: pointer;
+         border: none;
+         outline: none;
+         font-weight: 500;
+         font-size: 1rem;
+         border-radius: 2px;
+         transition: .2s ease-in;
+     }
+ 
+     .vedio {
+         margin-top: 3rem;
+         width: 95%;
+         height: 100%;
+     }
+ 
+     .layout {
+         background: #595cfc;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 4rem 2rem;
+         border-radius: 2px;
+         margin: 5rem 0;
+         flex-direction: column;
+         gap: 2rem;
+     }
+ 
+ }
