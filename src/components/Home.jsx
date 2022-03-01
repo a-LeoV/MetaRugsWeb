@@ -1,17 +1,25 @@
-import { Card, Button, Content } from "antd";
-import Image from "rc-image";
+import { Card, Button, Content, Image } from "antd";
 import metagif from "./Images/MetaRugsTGif.gif";
+import { Link } from 'react-router-dom'
 import { useRUGBalance2 } from "hooks/useRUGBalance2";
 import movie from "../vedio/movie2.mp4";
+import movieArb from "../vedio/movie_arb.mp4";
+import movieBnb from "../vedio/movie_bnb.mp4";
+import moviePol from "../vedio/movie_pol.mp4";
 import { useEffect } from "react";
 import test from "../vedio/test.png";
+import binaly from "../vedio/Binaly.png";
+import aleo from "../vedio/aleo2.png";
+import test2 from "../vedio/test2.png";
 import "./styles/home.css";
 import { BsStarHalf } from "react-icons/bs";
 import { GiBrain } from "react-icons/gi";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BiLike } from "react-icons/bi";
 import { FiSettings } from "react-icons/fi";
-import { BsWindowDock, BsGlobe2 } from "react-icons/bs";
+import { BsWindowDock, BsGlobe2, BsHash, BsCloudCheck, BsEye, BsTwitter } from "react-icons/bs";
+import { GiMeltingIceCube, GiHastyGrave } from "react-icons/gi";
+
 
 //  <Card style={styles.card} title={<h1 style={styles.title}>👋 Welcome rugged fellas</h1>}>
 {
@@ -60,11 +68,9 @@ export default function Home({ isServerInfo }) {
         data-aos-easing="linear"
         data-aos-anchor-placement="top-center"
       >
-        <h1>Build up the whole picture</h1>
+        <h1>7,400 beautiful <span className="startup_blue">Rugs</span></h1>
         <h2>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum — semper quis lectus nulla
-          at volutpat diam ut venenatis.
+        MetaRugs 1.0 collection was idealized and build by frustrated rugged users in rescue of <Link onClick={()=> window.open("https://opensea.io/collection/thecryptorugs", "_blank" )}>CryptoRugs</Link> -- an abandoned NFT project with awful art and a great idea. Anyone can burn a CryptoRug in exchange for a random MetaRug or mint one with ETH.
         </h2>
       </div>
       <div className="workflow">
@@ -76,14 +82,12 @@ export default function Home({ isServerInfo }) {
         >
           <div className="icons_div">
             <div className="icons">
-              <BsStarHalf className="icon" />
+              <BsHash className="icon2"/>
             </div>
           </div>
-          <h2>Robust Workflow</h2>
+          <h2>Provenance Hash</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat.
+            MetaRugs 1.0 NFTs are verifiably determined before minting starts. Our Provenance Hash is a SHA-256 hash value result of input full metadata + videos CIDs. 
           </p>
         </div>
         <div
@@ -94,14 +98,12 @@ export default function Home({ isServerInfo }) {
         >
           <div className="icons_div">
             <div className="icons">
-              <BsWindowDock className="icon" />
+              <BsCloudCheck className="icon2" />
             </div>
           </div>
-          <h2>Robust Workflow</h2>
+          <h2>Descentralized Database</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat.
+            Both metadata JSONs and mp4 artwork renders are 100% hosted on IPFS and Filecoin with web3.storage for a secure and permanent availability.
           </p>
         </div>
         <div
@@ -112,14 +114,12 @@ export default function Home({ isServerInfo }) {
         >
           <div className="icons_div">
             <div className="icons">
-              <BsGlobe2 className="icon" />
+              <BsGlobe2 className="icon2" />
             </div>
           </div>
-          <h2>Robust Workflow</h2>
+          <h2>Governance</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat.
+          Rugs meet democracy in Mr. DAO. Holders of MetaRugs 1.0 NFTs steer the future of MetaRugs via signature voting in the snapshot platform.
           </p>
         </div>
         <div
@@ -130,14 +130,12 @@ export default function Home({ isServerInfo }) {
         >
           <div className="icons_div">
             <div className="icons">
-              <GiBrain className="icon" />
+              <BsEye className="icon2" />
             </div>
           </div>
-          <h2>Robust Workflow</h2>
+          <h2>Long-term Vision</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat.
+            MetaRugs 2.0 is a limitless collection where users are able to mint the "Rug of the month". Rugs never stop being pulled -- so we keep them coming.
           </p>
         </div>
         <div
@@ -148,14 +146,12 @@ export default function Home({ isServerInfo }) {
         >
           <div className="icons_div">
             <div className="icons">
-              <BiLike className="icon" />
+            <GiMeltingIceCube className="icon2" />
             </div>
           </div>
-          <h2>Robust Workflow</h2>
+          <h2>Unfreezing Capital</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat.
+          NFT scene is crowded with hopeless NFT projects and we are the safety net. Propose a R.I.P. for the DAO and get your "favorite" worthless collection whitelisted. 
           </p>
         </div>
         <div
@@ -166,14 +162,12 @@ export default function Home({ isServerInfo }) {
         >
           <div className="icons_div">
             <div className="icons">
-              <FiSettings className="icon" />
+            <GiHastyGrave className="icon2" />
             </div>
           </div>
-          <h2>Robust Workflow</h2>
+          <h2>NFT Graveyard</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat.
+          Perhaps you bought in and fallen victim to one or two failed NFT collections? We don't judge. Bury the worthless NFTs off your wallet and get $RUGD rewards. 
           </p>
         </div>
       </div>
@@ -183,11 +177,12 @@ export default function Home({ isServerInfo }) {
         data-aos-anchor-placement="top-center"
         data-aos-easing="linear"
       >
-        <h1>Workflow that just works</h1>
+        <h1><span className="startup_blue">Rugs</span> never been that <span className="startup_blue">Meta</span></h1>
         <h2>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum — semper quis lectus nulla
-          at volutpat diam ut venenatis.
+         We've been baptized before Zuck made Meta sound like a bad word.
+        </h2>
+        <h2>
+          Please bear with us.
         </h2>
       </div>
       <div className="workflow_img_right">
@@ -196,43 +191,35 @@ export default function Home({ isServerInfo }) {
           data-aos="fade-right"
           data-aos-easing="linear"
         >
-          <p className="blue">LIGHTNING FAST WORKFLOW</p>
-          <h2 className="data">Data-driven insights</h2>
+          <p className="blue">DATA-DRIVEN ODDS</p>
+          <h2 className="data">Social and economic impact</h2>
           <p className="gray">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            MetaRugs 1.0 collection odds were carefully crafted to reflect social and economic impact concerning each Rug Event.
+            Economic impact of hacks/scams/exploits have been classified in equally weigthed BTC and fiat terms. Social impact is measured by a log regression of Google Trends searches.
           </p>
         </div>
         <div data-aos="fade-left" data-aos-easing="linear">
-          <img
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src="https://open.cruip.com/static/media/features-split-image-01.d9cb99ce.png"
-            alt=""
-          />
+        <video autoPlay muted loop className="vedio2" controls>
+          <source src={movieBnb} type="video/mp4" />
+        </video>
         </div>
       </div>
       <div className="workflow_img_right">
         <div data-aos="fade-right" data-aos-easing="linear">
-          <img
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src="https://open.cruip.com/static/media/features-split-image-01.d9cb99ce.png"
-            alt=""
-          />
+        <video autoPlay muted loop className="vedio2" controls>
+          <source src={moviePol} type="video/mp4" />
+        </video>
         </div>
         <div
           className="lightning"
           data-aos="fade-left"
           data-aos-easing="linear"
         >
-          <p className="blue">LIGHTNING FAST WORKFLOW</p>
-          <h2 className="data">Data-driven insights</h2>
+          <p className="blue">NFT GRAVEYARD</p>
+          <h2 className="data">Bury worthless NFTs and get $RUGD</h2>
           <p className="gray">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          What happened to CryptoRugs is but a symptom of a much worse, deep disease. 
+          We don't want it to spread, do we? Don't let those worthless NFTs you don't even remember buying pollute your wallet -- Bury them and receive $RUGD rewards. 
           </p>
         </div>
       </div>
@@ -242,21 +229,17 @@ export default function Home({ isServerInfo }) {
           data-aos="fade-right"
           data-aos-easing="linear"
         >
-          <p className="blue">LIGHTNING FAST WORKFLOW</p>
-          <h2 className="data">Data-driven insights</h2>
+          <p className="blue">SPRAY & PRAY</p>
+          <h2 className="data">Multi-chain approach in all levels</h2>
           <p className="gray">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua — Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          MetaRugs home is ETH but we celebrate all chains. You can find your favorite chain as a floating artifact beside our Rugs.
+          Furthermore, NFT Graveyard and $RUGD token is expected to launch on all chains that Mr. DAO see fit.
           </p>
         </div>
         <div data-aos="fade-left" data-aos-easing="linear">
-          <img
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            src="https://open.cruip.com/static/media/features-split-image-01.d9cb99ce.png"
-            alt=""
-          />
+        <video autoPlay muted loop className="vedio2" controls>
+          <source src={movieArb} type="video/mp4" />
+        </video>
         </div>
       </div>
       <div
@@ -265,37 +248,91 @@ export default function Home({ isServerInfo }) {
         data-aos-anchor-placement="top-center"
         data-aos-easing="linear"
       >
-        <h1>Customer testimonials</h1>
-        <h2>
-          Vitae aliquet nec ullamcorper sit amet risus nullam eget felis semper
-          quis lectus nulla at volutpat diam ut venenatis tellus—in ornare.
-        </h2>
-      </div>
+        <h1><span className="startup_blue">MetaRugs</span> Team</h1>
+       </div>
+      
       <div
         className="testimonials"
         data-aos="fade-up"
         data-aos-anchor-placement="top-center"
         data-aos-easing="linear"
       >
+        
         <div className="test_items">
+        <div className="test_icon">
+        <Image 
+                preview={false}
+                
+                src={binaly}
+                 alt=""
+                 style={{
+                  height: "130px",
+                  width: "130px",
+                  borderRadius: "50%",
+                  marginTop: "-120px",
+                  float: "center",
+                  border: "solid 4px white",
+                }}
+                
+              />
+              <p>
+          BinAly
+          </p>
+              </div>
           <img
             style={{
               width: "40px",
               height: "40px",
               objectFit: "cover",
               marginBottom: "1rem",
+             
             }}
             src={test}
             alt=""
           />
           <p>
-            — Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum cillum dolore eu fugiat.
+          Experienced Game Designer, crypto curious and Role-playing Games lover. BinAly is the legend behind MetaRugs stunning artwork renders.
           </p>
+          <img
+            style={{
+              width: "40px",
+              height: "40px",
+              objectFit: "cover",
+              marginBottom: "1rem",
+              float: "right",
+            }}
+            src={test2}
+            alt=""
+          />
+         
+           <BsTwitter className="icon3" />
+           <p style={{ position: "absolute", top: "340px", left: "250px",}} >
+          @BinAly
+          </p>
+         
         </div>
+      
         <div className="test_items">
+        <div className="test_icon">
+        <Image 
+                preview={false}
+                
+                src={aleo}
+                 alt=""
+                 style={{
+                  height: "130px",
+                  width: "130px",
+                  borderRadius: "50%",
+                  marginTop: "-120px",
+                  float: "center",
+                  border: "solid 4px white",
+                }}
+                
+              />
+              <p>
+          aLeo
+          </p>
+              </div>
           <img
             style={{
               width: "40px",
@@ -307,33 +344,43 @@ export default function Home({ isServerInfo }) {
             alt=""
           />
           <p>
-            — Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum cillum dolore eu fugiat.
+            CEO of MetaRugs, crypto affictionado, rug lover. aLeo is the headstrong who persists in handing over codes and tables alone while managing the rest of the moving pieces.   
           </p>
-        </div>
-        <div className="test_items">
           <img
             style={{
               width: "40px",
               height: "40px",
               objectFit: "cover",
               marginBottom: "1rem",
+              float: "right",
             }}
-            src={test}
+            src={test2}
             alt=""
           />
-          <p>
-            — Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum cillum dolore eu fugiat.
+           <BsTwitter className="icon4" />
+           <p style={{ position: "absolute", top: "340px", left: "830px",}} >
+          @MetaRugs
           </p>
+          
         </div>
       </div>
+      <div
+        className="startup"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        data-aos-easing="linear"
+             >
+        <h2>
+         Special thanks to Toff33, Okabe, Worksmarter, Bart, Jason and Eman for their effort and brainstorming on MetaRugs early days.
+        </h2>
+      </div>
+     
+     
+     
+
       <div className="layout">
-        <h2>For previewing layouts and visual?</h2>
+        <h2>Ready to get MetaRugged?</h2>
+        
         <div className="input_cotnainer">
           <input type="text" placeholder="Your best email" />
           <div className="icons_con">
@@ -341,8 +388,12 @@ export default function Home({ isServerInfo }) {
               style={{ width: ".9rem", cursor: "pointer", height: ".9rem" }}
             />
           </div>
+        
         </div>
+      
       </div>
+    
     </div>
+    
   );
 }

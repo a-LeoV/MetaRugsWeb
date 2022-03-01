@@ -231,7 +231,7 @@ function Burn () {
         
 
     <div style={{ display: "flex", gap: "10px", maxWidth: "820px", flexWrap: "wrap" }}>
-      <Card style={styles.card} title={<h1 style={styles.title}>📝 Approve Meta Rugs contract</h1>}>
+      <Card style={styles.card} title={<h1 style={styles.title}>📝 Approve MetaRugs contract</h1>}>
       <Button icon={<CheckOutlined />} style={styles.buttons}
         style={ 
           isApproved == true
@@ -244,7 +244,7 @@ function Burn () {
       </Card>
       
       <div>
-        <Card style={styles.card} title={<h1 style={styles.title}>🔥 Burn all your Crypto Rugs & mint Meta Rugs</h1>}>
+        <Card style={styles.card} title={<h1 style={styles.title}>🔥 Burn all your CryptoRugs & mint MetaRugs</h1>}>
         <Button style={styles.buttons} icon={<FireOutlined />} 
         onClick={() => burn2mint_ALL_RUGS()}
         > Burn</Button>

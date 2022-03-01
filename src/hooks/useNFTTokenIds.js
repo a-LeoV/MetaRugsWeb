@@ -19,10 +19,11 @@ export const useNFTTokenIds = (addr) => {
   } = useMoralisWeb3ApiCall(token.getAllTokenIds, {
     chain: chainId,
     address: addr,
-    limit: 10,
+    limit: 20,
   });
 
-  useEffect(async () => {
+  useEffect(() => {
+    (async function() {
     if (data?.result) {
       const NFTs = data.result;
       setTotalNFTs(data.total);
@@ -45,24 +46,24 @@ export const useNFTTokenIds = (addr) => {
             Create a proxy server as per https://dev.to/terieyenike/how-to-create-a-proxy-server-on-heroku-5b5c
             Replace <your url here> with your proxy server_url below
             Remove comments :)
+*/
+            try {
+             await fetch(`https://fierce-mountain-52440.herokuapp.com/${NFT.token_uri}`)
+             .then(response => response.json())
+             .then(data => {
+              NFT.image = resolveLink(data.image);
+           });
+          } catch (error) {
+         setFetchSuccess(false);
+          }
 
-              try {
-                await fetch(`<your url here>/${NFT.token_uri}`)
-                .then(response => response.json())
-                .then(data => {
-                  NFT.image = resolveLink(data.image);
-                });
-              } catch (error) {
-                setFetchSuccess(false);
-              }
-
- */
+ 
           }
         }
       }
       setNFTTokenIds(NFTs);
     }
-  }, [data]);
+  })()}, [data]);
 
   return {
     getNFTTokenIds,

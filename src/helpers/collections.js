@@ -105,6 +105,30 @@ export const networkCollections = {
       name: "Cool Cats NFT",
       addrs: "0x1A92f7381B9F03921564a437210bB9396471050C",
     },
+    {
+      image:
+        "https://lh3.googleusercontent.com/vJwNDSZcy4-Fu-oLdswpcHJ8YaN33KaLcj6r11yPEY7Y1WQ3HbQi-AiM3btW990D0ndvW-HE3uKVl3Ur-GS-sQ7IaOStYgO-QbRgNg=s130",
+      name: "Frosties",
+      addrs: "0x3C99F2A4b366D46bcf2277639A135A6D1288EcEB",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/GEQS-4K68RouEsvN9o-Fm7kM0Meszn20pc2_2FPFPEwni09qIqQYDmMaJv8M21SIgvitlnfPWQoRG3uzwoQnhEAsl8J2FR9bdZ2Tmw=s130",
+      name: "Evolved Apes Inc.",
+      addrs: "0x233a65b06ef83ccf2fd58832086dd782f9da1642",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/7KkOAh6-6ORJVtcprl2iyvyJBuvk2UWuXdimcH7w82wRUPW4DsOtHmuptg7S9BsOlRQhhU2m6z1ec5ZnWhvFY05L1tpSUUIh35Q9=s130",
+      name: "Stoner Cats",
+      addrs: "0xD4d871419714B778eBec2E22C7c53572b573706e",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/XHZY9623keDQqFSDHKqOdcjD99Y7N82K1egYRM2Mm1Z-Jxn5myrkKiC5NBktWKStVtTzDzwELy9dNpzTWJTIkLsdMIxUHI86jduQ=s130",
+      name: "Tubby Cats",
+      addrs: "0xCa7cA7BcC765F77339bE2d648BA53ce9c8a262bD",
+    },
   ],
 };
 
