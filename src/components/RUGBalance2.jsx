@@ -6,7 +6,7 @@ import { FileSearchOutlined, FireOutlined } from "@ant-design/icons";
 import { useMoralisDapp } from "providers/MoralisDappProvider/MoralisDappProvider";
 import { getExplorer } from "helpers/networks";
 import { useWeb3ExecuteFunction } from "react-moralis";
-import altRug from "./Images/CryptoRugsUnrevealed.jpg"
+import altRug from "./Images/CryptoRugsUnrevealed.jpg";
 import "./styles/home.css";
 import {
        NavLink,
@@ -111,6 +111,7 @@ const styles = {
 
 
 function RUGBalance() {
+  const { authenticate, isAuthenticated, logout } = useMoralis();
   const { RUGBalance, totalNFTs, fetchSuccess } = useRUGBalance2();
   const { chainId, crContractABI, crAddress, mrAddress, mrContractABI, walletAddress } = useMoralisDapp();
   const { Moralis } = useMoralis();
@@ -269,6 +270,17 @@ async function burn2mint_ONE_RUG(nft) {
 
   return (
     <> 
+       <div style={styles.NFTs}>
+        {isAuthenticated != true && (
+          <>
+            <Alert
+              message="Connect a wallet to see your CryptoRugs"
+              type="error"
+            />
+            <div style={{ marginBottom: "10px" }}></div>
+          </>
+        )}
+        </div>
 
 <div className="home container">
       <div
@@ -280,9 +292,9 @@ async function burn2mint_ONE_RUG(nft) {
         Congratulations
         </h1>
         <h2>
-        You've been provably rugged <span className="startup_blue"> { totalNFTs == 0
-            ? "undefined"
-            : totalNFTs } </span> times
+        You've been provably rugged <span className="startup_blue"> { totalNFTs >= 0
+            ? totalNFTs
+            : "undefined" } </span> times
         </h2>
         <div>
         </div>
@@ -292,32 +304,33 @@ async function burn2mint_ONE_RUG(nft) {
         
         </div>
         </div>
+        <div 
+        className="burnbutton_group"
+        
+  
+      >
+        <div  className="burn" >  
+        <h2 >
+        Enjoy getting rugged?
+        </h2>
+       
+        
+        
+          <button className="blue" onClick={()=> window.open("https://opensea.io/collection/thecryptorugs", "_blank" )} >  CryptoRugs on OpenSea </button>
+         
+          </div>
+          
+        </div>
        
                
-        <div style={{ display:"flex", justifyContent: "center", alignItems: "center"}} >
+        <div style={{ display:"flex", justifyContent: "center", alignItems: "center", margin: "1.5rem 0"}} >
         <Card style={styles.card} title={<h1 style={styles.title}> {"Save gas and burn all your CryptoRugs at once!"} </h1>}  >
         <NavLink className="center-block" style={styles.navLink}   to="/burn">🔥 Burn All your CryptoRugs & Mint MetaRugs</NavLink> 
             </Card>
             </div>
             <div>
             
-            <div 
-        className="burnbutton_group"
-        style={{ margin: "20px 0" }}
-  
-      >
-        <div  className="burn" >  
-        <h2 >
-        Enjoy getting rugged? You can check
-        </h2>
-       
-       
-        
-          <button className="blue" onClick={()=> window.open("https://opensea.io/collection/thecryptorugs", "_blank" )} >  CryptoRugs on OpenSea </button>
-         
-
-          </div>
-        </div>
+          
        
      
       <div style={styles.NFTs}> 

@@ -79,15 +79,15 @@
     width: 54%;
     text-align: right;
     font-weight: 400;
-    padding-right: 0.5rem;
+    padding-right: 1rem;
 }
 
 .burnbutton_group {
-    padding-top: 2rem;
+    padding-top: 0rem;
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 1.5rem;
+    gap: 0rem;
 }
 
 .burnbutton_group .blue {
@@ -101,6 +101,7 @@
     font-size: 1.2rem;
     border-radius: 2px;
     transition: .2s ease-in;
+    white-space: nowrap;
 }
 
 .burnbutton_group .blue:hover {
@@ -237,7 +238,7 @@
     width: 2rem;
     color: #6f71f1;
     position: absolute;
-    top: 340px;
+    top: 360px;
     left: 215px;
 }
 .icon4 {
@@ -245,7 +246,7 @@
     width: 2rem;
     color: #6f71f1;
     position: absolute;
-    top: 340px;
+    top: 360px;
     left: 795px;
 }
 
@@ -548,5 +549,4 @@
         flex-direction: column;
         gap: 2rem;
     }
-
 }

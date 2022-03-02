@@ -7,6 +7,7 @@ import { useState } from "react";
 import Address from "./Address/Address";
 import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
+import { useHistory } from "react-router-dom";
 const styles = {
   account: {
     height: "42px",
@@ -28,14 +29,22 @@ function Account() {
   const { authenticate, isAuthenticated, logout } = useMoralis();
   const { walletAddress, chainId } = useMoralisDapp();
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const history = useHistory();
+
+  const handleAuth = (signingMessage) => {
+    authenticate(signingMessage);
+    history.push("/Home");
+  };
+    
 
   if (!isAuthenticated) {
+    
     return (
       <div
         style={styles.account}
-        onClick={() => authenticate({ signingMessage: "Hello my rugged fella" })}
+        onClick={() => handleAuth({ signingMessage: "Hello my rugged fella" }) }
       >
-        <p style={styles.text}>Authenticate</p>
+        <p style={styles.text}>Connect wallet</p>
       </div>
     );
   }

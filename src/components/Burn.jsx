@@ -1,6 +1,7 @@
 import { useMoralisDapp } from "providers/MoralisDappProvider/MoralisDappProvider";
+import { useMoralis } from "react-moralis";
 import { useWeb3ExecuteFunction, useMoralisWeb3ApiCall } from "react-moralis";
-import { Card, Button, InputNumber, Typography } from "antd";
+import { Card, Button, InputNumber, Typography, Alert } from "antd";
 import React, { useState, useEffect } from "react";
 import { FireOutlined, CheckOutlined, WalletOutlined } from "@ant-design/icons";
 import "./styles/home.css";
@@ -13,15 +14,16 @@ const styles = {
     textAlign: "center",
     flex: "1",
     color: "white",
+   
   },
   text: {
     fontSize: "16px",
     color: "white",
+    
   },
   card: {
-    boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
+  
     border: "1px solid #e7eaf3",
-    borderRadius: "40px",
     width: "400px",
     height: "250px",
     flexDirection: "column",
@@ -31,10 +33,9 @@ const styles = {
     background:"#28242c",
   },
   card2: {
-    boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
+    
     border: "1px solid #e7eaf3",
-    borderRadius: "40px",
-    width: "800px",
+    width: "810px",
     height: "300px",
     flexDirection: "row",
     justifyContent: "center",
@@ -43,10 +44,10 @@ const styles = {
     background:"#28242c",
   },
   buttons: {
-    background: "blue",
+    background: "#6163ff",
     color: "white",
     shape: "round",
-    padding: "10px",
+   
     border: "none",
     display: "flex",
     flex: "1",
@@ -56,16 +57,15 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     cursor: "pointer",
-    boxShadow: "0px 2px 2px lightgray",
-    borderRadius: "40px",
+    borderRadius: "2px",
     fontSize: "40px",
     fontWeight: "700",
   },
   disabledButtons: {
     background: "#D5D5D5",
-    color: "grey",
+    color: "#2c2d2e",
     shape: "round",
-    padding: "10px",
+  
     border: "none",
     display: "flex",
     flex: "1",
@@ -74,17 +74,16 @@ const styles = {
     justifyContent: 'center',
     flexDirection: "column",
     alignItems: "center",
-    boxShadow: "0px 2px 2px lightgray",
-    borderRadius: "40px",
+    borderRadius: "2px",
     fontSize: "40px",
     fontWeight: "300",
     cursor: "not-allowed",
   },
   buttons2: {
-    background: "blue",
+    background: "#6163ff",
     color: "white",
     shape: "round",
-    padding: "10px",
+    
     border: "none",
     display: "flex",
     flex: "1",
@@ -94,8 +93,8 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     cursor: "pointer",
-    boxShadow: "0px 2px 2px lightgray",
-    borderRadius: "40px",
+   
+    borderRadius: "2px",
     fontSize: "40px",
     fontWeight: "700",
   },
@@ -104,6 +103,7 @@ const styles = {
 function Burn () {
   
     const { chainId, crContractABI, crAddress, mrAddress, mrContractABI, walletAddress } = useMoralisDapp();
+    const { authenticate, isAuthenticated, logout } = useMoralis();
     const contractProcessor = useWeb3ExecuteFunction();
     const crContractABIJson = JSON.parse(crContractABI);
     const mrContractABIJson = JSON.parse(mrContractABI);
@@ -217,22 +217,36 @@ function Burn () {
 
 
     return (
-
       <div className="home container">
+          <div style={styles.NFTs}>
+        {isAuthenticated != true && (
+          <>
+            <Alert
+              message="Connect a wallet to burn CryptoRugs and mint MetaRugs"
+              type="error"
+            />
+            <div style={{ marginBottom: "10px" }}></div>
+          </>
+        )}
+        </div>
+
       <div
         className="startup2"
-        style={{ margin: "20px 0" }}
+        style={{ margin: "10px 0" }}
   
       >
         <h1>
         Get MetaRugged
         </h1>
+        <h2>
+        Burn your CryptoRugs and get MetaRugs
+        </h2>
         </div>
         
 
-    <div style={{ display: "flex", gap: "10px", maxWidth: "820px", flexWrap: "wrap" }}>
-      <Card style={styles.card} title={<h1 style={styles.title}>📝 Approve MetaRugs contract</h1>}>
-      <Button icon={<CheckOutlined />} style={styles.buttons}
+    <div  style={{ display: "flex", gap: "10px", maxWidth: "820px", flexWrap: "wrap", overflow: "hidden" }}>
+      <Card style={styles.card} title={<h1 style={styles.title}>📝 Approve MetaRugs</h1>}>
+      <Button icon={<CheckOutlined />}
         style={ 
           isApproved == true
             ? styles.disabledButtons
@@ -244,24 +258,30 @@ function Burn () {
       </Card>
       
       <div>
-        <Card style={styles.card} title={<h1 style={styles.title}>🔥 Burn all your CryptoRugs & mint MetaRugs</h1>}>
+        <Card style={styles.card} title={<h1 style={styles.title}>🔥 Burn all CryptoRugs</h1>}>
         <Button style={styles.buttons} icon={<FireOutlined />} 
         onClick={() => burn2mint_ALL_RUGS()}
         > Burn</Button>
         </Card>
-     
-   
         </div>
-   <div>     <Card style={styles.card2} title={<h1 style={styles.title}>🌿 Mint MetaRugs for 0.05 ETH each</h1>}>
-     <div style={{ display: 'flex', justifyContent: 'center', alignItems: "center", gap: "20px", padding: "10px"}} >
+        <div className="startup2" >
+     <h2 style={{padding: "10px"}} >
+        MetaRugs are also mintable for ETH
+        </h2>
+     </div>
+   <div>     <Card style={styles.card2} title={<h1 style={styles.title}>Mint MetaRugs | 0.05 ETH</h1>}>
+     <div style={{ display: 'flex', justifyContent: 'center', alignItems: "center"}} >
        
-     <InputNumber autoFocus={true} defaultValue={"0"} min={"1"} max={"30"} onChange={onChange} />
-     {<h1 style={styles.text}> Max 30 MetaRugs for transaction</h1>}
+     
      </div> 
     
         <Button style={styles.buttons2} icon={<WalletOutlined />} 
         onClick={() => mintArug(amountToMint)}
         > Mint</Button>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: "center", gap: "20px", padding: "25px"}} >
+        <InputNumber autoFocus={true} defaultValue={"0"} min={"1"} max={"30"} onChange={onChange} />
+     {<h1 style={styles.text}> Max 30 MetaRugs for transaction</h1>}
+        </div>
         </Card>
         </div>
       </div>

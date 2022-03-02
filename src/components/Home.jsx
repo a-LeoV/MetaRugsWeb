@@ -9,7 +9,7 @@ import moviePol from "../vedio/movie_pol.mp4";
 import { useEffect } from "react";
 import test from "../vedio/test.png";
 import binaly from "../vedio/Binaly.png";
-import aleo from "../vedio/aleo2.png";
+import aleo from "../vedio/aleoBW.png";
 import test2 from "../vedio/test2.png";
 import "./styles/home.css";
 import { BsStarHalf } from "react-icons/bs";
@@ -119,7 +119,7 @@ export default function Home({ isServerInfo }) {
           </div>
           <h2>Governance</h2>
           <p>
-          Rugs meet democracy in Mr. DAO. Holders of MetaRugs 1.0 NFTs steer the future of MetaRugs via signature voting in the snapshot platform.
+          Rugs meet democracy in MR. DAO. Holders of MetaRugs 1.0 NFTs steer the future of MetaRugs via signature voting in the snapshot platform.
           </p>
         </div>
         <div
@@ -151,7 +151,7 @@ export default function Home({ isServerInfo }) {
           </div>
           <h2>Unfreezing Capital</h2>
           <p>
-          NFT scene is crowded with hopeless NFT projects and we are the safety net. Propose a R.I.P. for the DAO and get your "favorite" worthless collection whitelisted. 
+          NFT scene is crowded with hopeless NFT projects and we are the safety net. Propose a R.I.P. for MR. DAO and get your "favorite" worthless collection whitelisted. 
           </p>
         </div>
         <div
@@ -167,7 +167,7 @@ export default function Home({ isServerInfo }) {
           </div>
           <h2>NFT Graveyard</h2>
           <p>
-          Perhaps you bought in and fallen victim to one or two failed NFT collections? We don't judge. Bury the worthless NFTs off your wallet and get $RUGD rewards. 
+          Perhaps you have bought in and fallen victim to one or two failed NFTs? We don't judge, come bury the worthless NFTs in your wallet and get $RUGD rewards.
           </p>
         </div>
       </div>
@@ -177,7 +177,7 @@ export default function Home({ isServerInfo }) {
         data-aos-anchor-placement="top-center"
         data-aos-easing="linear"
       >
-        <h1><span className="startup_blue">Rugs</span> never been that <span className="startup_blue">Meta</span></h1>
+        <h1><span className="startup_blue">Rugs</span> have never been this <span className="startup_blue">Meta</span></h1>
         <h2>
          We've been baptized before Zuck made Meta sound like a bad word.
         </h2>
@@ -194,8 +194,8 @@ export default function Home({ isServerInfo }) {
           <p className="blue">DATA-DRIVEN ODDS</p>
           <h2 className="data">Social and economic impact</h2>
           <p className="gray">
-            MetaRugs 1.0 collection odds were carefully crafted to reflect social and economic impact concerning each Rug Event.
-            Economic impact of hacks/scams/exploits have been classified in equally weigthed BTC and fiat terms. Social impact is measured by a log regression of Google Trends searches.
+          MetaRugs 1.0 collection odds were carefully crafted to reflect social and economic impact concerning each Rug Event. 
+          Economic impact of hacks/scams/exploits have been classified in equally weighted BTC and fiat terms. Social impact is measured by a log regression of Google Trends searches.
           </p>
         </div>
         <div data-aos="fade-left" data-aos-easing="linear">
@@ -218,8 +218,8 @@ export default function Home({ isServerInfo }) {
           <p className="blue">NFT GRAVEYARD</p>
           <h2 className="data">Bury worthless NFTs and get $RUGD</h2>
           <p className="gray">
-          What happened to CryptoRugs is but a symptom of a much worse, deep disease. 
-          We don't want it to spread, do we? Don't let those worthless NFTs you don't even remember buying pollute your wallet -- Bury them and receive $RUGD rewards. 
+          What happened to CryptoRugs is but a symptom of a much worse, deep disease. We don't want it to spread, do we? 
+          Don't let those worthless NFTs in your wallet you don't even remember buying, remind you of your costly mistakes -- Bury them and receive $RUGD rewards. 
           </p>
         </div>
       </div>
@@ -233,7 +233,7 @@ export default function Home({ isServerInfo }) {
           <h2 className="data">Multi-chain approach in all levels</h2>
           <p className="gray">
           MetaRugs home is ETH but we celebrate all chains. You can find your favorite chain as a floating artifact beside our Rugs.
-          Furthermore, NFT Graveyard and $RUGD token is expected to launch on all chains that Mr. DAO see fit.
+          Furthermore, NFT Graveyard and $RUGD token is expected to launch on all chains that MR. DAO see fit.
           </p>
         </div>
         <div data-aos="fade-left" data-aos-easing="linear">
@@ -306,7 +306,7 @@ export default function Home({ isServerInfo }) {
           />
          
            <BsTwitter className="icon3" />
-           <p style={{ position: "absolute", top: "340px", left: "250px",}} >
+           <p style={{ position: "absolute", top: "360px", left: "250px",}} >
           @BinAly
           </p>
          
@@ -344,7 +344,7 @@ export default function Home({ isServerInfo }) {
             alt=""
           />
           <p>
-            CEO of MetaRugs, crypto affictionado, rug lover. aLeo is the headstrong who persists in handing over codes and tables alone while managing the rest of the moving pieces.   
+            CEO of MetaRugs, crypto enthusiast since 2017, ETH miner, rug lover. aLeo idealized MetaRugs, co-directed Rugs design, manages the descentralized database, smartcontract and website coding and still finds time to shitpost on twitter.   
           </p>
           <img
             style={{
@@ -358,7 +358,7 @@ export default function Home({ isServerInfo }) {
             alt=""
           />
            <BsTwitter className="icon4" />
-           <p style={{ position: "absolute", top: "340px", left: "830px",}} >
+           <p style={{ position: "absolute", top: "360px", left: "830px",}} >
           @MetaRugs
           </p>
           

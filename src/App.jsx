@@ -68,7 +68,7 @@ const styles = {
   },
 };
 const App = ({ isServerInfo }) => {
-  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =useMoralis();
+  const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading, authenticate } =useMoralis();
     useMoralis();
   const [inputValue, setInputValue] = useState("explore");
   
@@ -77,8 +77,6 @@ const App = ({ isServerInfo }) => {
     if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading) enableWeb3();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated, isWeb3Enabled]);
-
-  const history = useHistory();
 
 useEffect(() => {
   Aos.init({
