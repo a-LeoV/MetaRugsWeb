@@ -7,10 +7,10 @@ import {
   NavLink,
   Redirect,
   useHistory,
+  Link,
 } from "react-router-dom";
 import Account from "components/Account";
 import Chains from "components/Chains";
-import { Link } from "react-router-dom";
 import Home from "components/Home";
 import { Menu, Layout } from "antd";
 import Burn from "components/Burn";
@@ -85,6 +85,15 @@ useEffect(() => {
   
 }, [])
 
+function copyToClip() {
+ 
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText("metarugs@gmail.com");
+
+  /* Alert the copied text */
+  alert("Metarugs e-mail address was copied to clipboard");
+}
+
   return (
     <Layout >
       <Router>
@@ -153,15 +162,16 @@ useEffect(() => {
             </div>
             <div className="footer_right">
               <div className="footer_icon">
-                <BsMedium className="footer_s_icon" />
-                <BsTwitter className="footer_s_icon" />
-                <FaDiscord className="footer_s_icon" />
+                <BsMedium className="footer_s_icon" onClick={()=> window.open("https://medium.com/@Meta_Rugs", "_blank" )} />
+                <BsTwitter className="footer_s_icon" onClick={()=> window.open("https://twitter.com/MetaRugs", "_blank" )} />
+                <FaDiscord className="footer_s_icon" onClick={()=> window.open("https://discord.com/invite/3vnTdFEkBq", "_blank" )} />
               </div>
               <div className="footer_items">
-                <Link to="/contact">Contact</Link>
+                <a target="_blank" onClick={copyToClip}>Contact</a>
                 <Link to="/about">About us</Link>
                 <Link to="/faq">FAQ's</Link>
-                <Link to="/support">Support</Link>
+                <a target="_blank" onClick={()=> window.open("https://docs.google.com/spreadsheets/d/1e_XzVGpYCTSXeQD-beOsPWlLMbWFf5MEeF-vM7qDvyE/edit?usp=sharing", "_blank" )}>Odds</a>
+                
               </div>
             </div>
           </div>

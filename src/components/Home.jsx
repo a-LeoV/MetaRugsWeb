@@ -70,7 +70,9 @@ export default function Home({ isServerInfo }) {
       >
         <h1>7,400 beautiful <span className="startup_blue">Rugs</span></h1>
         <h2>
-        MetaRugs 1.0 collection was idealized and build by frustrated rugged users in rescue of <Link onClick={()=> window.open("https://opensea.io/collection/thecryptorugs", "_blank" )}>CryptoRugs</Link> -- an abandoned NFT project with awful art and a great idea. Anyone can burn a CryptoRug in exchange for a random MetaRug or mint one with ETH.
+        MetaRugs 1.0 collection was idealized and build by frustrated rugged users in rescue of 
+        <a target="_blank" onClick={()=> window.open("https://opensea.io/collection/thecryptorugs", "_blank" )}> CryptoRugs </a>
+         -- an abandoned NFT project with awful art and a great idea. Anyone can burn a CryptoRug in exchange for a random MetaRug or mint one with ETH.
         </h2>
       </div>
       <div className="workflow">
@@ -381,14 +383,11 @@ export default function Home({ isServerInfo }) {
       <div className="layout">
         <h2>Ready to get MetaRugged?</h2>
         
-        <div className="input_cotnainer">
-          <input type="text" placeholder="Your best email" />
-          <div className="icons_con">
-            <AiOutlineArrowRight
+        <div className="button_group2">
+        <button  className="gray2" onClick={()=> window.open("https://opensea.io/collection/thecryptorugs", "_blank" )}>Enter MR. DAO <AiOutlineArrowRight
               style={{ width: ".9rem", cursor: "pointer", height: ".9rem" }}
-            />
-          </div>
-        
+            />  </button>
+    
         </div>
       
       </div>
