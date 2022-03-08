@@ -196,7 +196,7 @@ export default function Home({ isServerInfo }) {
           <p className="blue">DATA-DRIVEN ODDS</p>
           <h2 className="data">Social and economic impact</h2>
           <p className="gray">
-          MetaRugs 1.0 collection odds were carefully crafted to reflect social and economic impact concerning each Rug Event. 
+          MetaRugs 1.0 collection <a target="_blank" onClick={()=> window.open("https://docs.google.com/spreadsheets/d/1e_XzVGpYCTSXeQD-beOsPWlLMbWFf5MEeF-vM7qDvyE/edit?usp=sharing", "_blank" )}>odds</a> were carefully crafted to reflect social and economic impact concerning each Rug Event. 
           Economic impact of hacks/scams/exploits have been classified in equally weighted BTC and fiat terms. Social impact is measured by a log regression of Google Trends searches.
           </p>
         </div>

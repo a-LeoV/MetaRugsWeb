@@ -91,7 +91,7 @@ function copyToClip() {
   navigator.clipboard.writeText("metarugs@gmail.com");
 
   /* Alert the copied text */
-  alert("Metarugs e-mail address was copied to clipboard");
+  alert("MetaRugs e-mail address copied to clipboard");
 }
 
   return (

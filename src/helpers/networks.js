@@ -71,6 +71,15 @@ export const networkConfigs = {
     rpcUrl: "https://rpc-mumbai.matic.today/",
     blockExplorerUrl: "https://mumbai.polygonscan.com/",
   },
+  "0x89": {
+    chainId: 250,
+    chainName: "Fantom Opera",
+    currencyName: "Fantom",
+    currencySymbol: "FTM",
+    rpcUrl: "https://rpc.ftm.tools/",
+    blockExplorerUrl: "https://ftmscan.com/",
+    mktPlaceUrl: "https://artion.io/explore/"
+  },
 };
 
 export const getNativeByChain = (chain) =>
