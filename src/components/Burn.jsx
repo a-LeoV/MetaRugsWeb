@@ -30,7 +30,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
-    background:"#28242c",
+    background:"#151719",
   },
   card2: {
     
@@ -41,7 +41,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
-    background:"#28242c",
+    background:"#151719",
   },
   buttons: {
     background: "#6163ff",

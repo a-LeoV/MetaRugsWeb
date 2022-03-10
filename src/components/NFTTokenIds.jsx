@@ -48,6 +48,7 @@ const styles = {
     // positon: "relative",
     // marginTop: "-80px",
     border: "solid 4px white",
+    objectFit: "contain",
   },
   text: {
     color: "#041836",
@@ -224,7 +225,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
               
               <Image 
                 preview={false}
-                
+               
                 src={findArrayElementByAddrs(inputValue)?.image || "error"}
                 fallback={fallbackImg}
                 alt=""
@@ -242,10 +243,10 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                       fontWeight: "normal",
                     }}
                   >
-                    Collection Size: {
+                    NFTs: {
                        checked === true
-                       ? `${totalGraveNFTs}`
-                       : `${totalNFTs}`}
+                       ? `#${totalGraveNFTs}`
+                       : `#${totalNFTs}`}
                        
                     <div
                     style={{
@@ -283,7 +284,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                     src={nft?.image || "error"}
                     fallback={fallbackImg}
                     alt=""
-                    style={{ height: "240px" }}
+                    style={{ height: "240px", objectFit: "contain" }}
                   />
                 }
                 key={index}
@@ -329,7 +330,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                     src={nft.image || "error"}
                     fallback={fallbackImg}
                     alt=""
-                    style={{ height: "240px" }}
+                    style={{ height: "240px", objectFit: "contain" }}
                   />
                 }
                 key={index}
@@ -378,7 +379,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                     src={nft.image || "error"}
                     fallback={fallbackImg}
                     alt=""
-                    style={{ height: "240px" }}
+                    style={{ height: "240px", objectFit: "contain" }}
                   />
                 }
                 key={index}
@@ -419,6 +420,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                       width: "250px",
                       borderRadius: "10px",
                       marginBottom: "15px",
+                      objectFit: "contain",
                     }}
                   />
                 </Badge.Ribbon>
@@ -440,6 +442,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                 margin: "auto",
                 borderRadius: "10px",
                 marginBottom: "15px",
+                objectFit: "contain",
               }}
             />
           </Modal>

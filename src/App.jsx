@@ -117,7 +117,7 @@ function copyToClip() {
               <NavLink activeStyle={{ color: "#fff" }} to="/home">
                 🏠 Meta Home
               </NavLink>
-            </Menu.Item>
+            </Menu.Item  >
             <Menu.Item key="rugBalance">
               <NavLink to="/rugBalance">💩 Your Rugs</NavLink>
             </Menu.Item>

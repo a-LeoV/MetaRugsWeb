@@ -38,6 +38,12 @@ export const networkCollections = {
       name: "Cocos Beach Gear",
       addrs: "0xc2b10bA22293Cc1A3984c24f4cf5A90681E875db",
     },
+    {
+      image:
+        "https://lh3.googleusercontent.com/x4B7M-QDK2jSp1IjWJZiRE87xqQpewE1W1eTxoqcDchkLMG8faiqEFaO0R2CledHsRk9hOyBM-vLNUIl2l2Y6kFVUoUEjemksOzBDw=s0",
+      name: "CryptoRugs",
+      addrs: "0xBe169ba8097583318A84014657eEcB5b32b283B8",
+    },
   ],
   
   "0x13881": [
@@ -83,7 +89,7 @@ export const networkCollections = {
     {
       image:
         "https://lh3.googleusercontent.com/GEQS-4K68RouEsvN9o-Fm7kM0Meszn20pc2_2FPFPEwni09qIqQYDmMaJv8M21SIgvitlnfPWQoRG3uzwoQnhEAsl8J2FR9bdZ2Tmw=s130",
-      name: "Evolved Apes Inc.",
+      name: "Evolved Apes",
       addrs: "0x233a65b06Ef83CCf2fd58832086dD782f9da1642",
     },
     {

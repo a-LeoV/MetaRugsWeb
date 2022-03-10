@@ -80,7 +80,7 @@ const styles = {
     height: "0",
   },
   card: {
-    boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
+    
     border: "1px solid #e7eaf3",
    
     width: "650px",
@@ -89,7 +89,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     flexWrap: "wrap",
-    background:"#28242c",
+    background:"#151719",
   },
   card2: {
     boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
