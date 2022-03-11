@@ -292,7 +292,7 @@ async function burn2mint_ONE_RUG(nft) {
         Congratulations
         </h1>
         <h2>
-        You've been provably rugged <span className="startup_blue"> { totalNFTs >= 0
+        You've been provably rugged <span className="startup_blue"> { totalNFTs > 0
             ? totalNFTs
             : "undefined" } </span> times
         </h2>

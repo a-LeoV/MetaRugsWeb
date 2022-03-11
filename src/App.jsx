@@ -119,7 +119,7 @@ function copyToClip() {
               </NavLink>
             </Menu.Item  >
             <Menu.Item key="rugBalance">
-              <NavLink to="/rugBalance">💩 Your Rugs</NavLink>
+              <NavLink to="/rugBalance">💩 CryptoRugs</NavLink>
             </Menu.Item>
             <Menu.Item key="burn">
               <NavLink to="/burn">🔥 Mint MetaRugs</NavLink>
