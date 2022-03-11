@@ -14,7 +14,7 @@ export const useRUGBalance2 = (options) => {
     data,
     error,
     isLoading,
-  } = useMoralisWeb3ApiCall(account.getNFTsForContract, { chain: chainId, ...options, token_address: "0xBe169ba8097583318A84014657eEcB5b32b283B8" });
+  } = useMoralisWeb3ApiCall(account.getNFTsForContract, { chain: chainId, ...options, token_address: "0x7685d54dB7b41dd751AD1e1b62a62f92D3cE09BE" });
   const [fetchSuccess, setFetchSuccess] = useState(true);
 
   useEffect(async () => {
