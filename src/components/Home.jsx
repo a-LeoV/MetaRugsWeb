@@ -1,6 +1,6 @@
 import { Card, Button, Content, Image } from "antd";
 import metagif from "./Images/MetaRugsTGif.gif";
-import { Link } from 'react-router-dom'
+import { useHistory  } from 'react-router-dom'
 import { useRUGBalance2 } from "hooks/useRUGBalance2";
 import movie from "../vedio/movie2.mp4";
 import movieArb from "../vedio/movie_arb.mp4";
@@ -21,17 +21,15 @@ import { BsWindowDock, BsGlobe2, BsHash, BsCloudCheck, BsEye, BsTwitter } from "
 import { GiMeltingIceCube, GiHastyGrave } from "react-icons/gi";
 
 
-//  <Card style={styles.card} title={<h1 style={styles.title}>👋 Welcome rugged fellas</h1>}>
-{
-  /* <Button style={styles.buttons}> {"You have " + totalNFTs + " dirty Crypto Rugs"}</Button>
-<div style={{ display: 'flex', justifyContent: 'center', alignItems: "center"}} >
- <Image src={metagif} width={540} height={540} />
- </div>
- </Card> */
-}
+
 
 export default function Home({ isServerInfo }) {
   const { totalNFTs } = useRUGBalance2();
+  const history = useHistory();
+
+  function handleGetStarted() {
+    history.push("/burn");
+  }
 
   return (
     <div className="home container">
@@ -53,8 +51,8 @@ export default function Home({ isServerInfo }) {
         We don't love the rugs -- We remember them.
         </h2>
         <div className="button_group">
-          <button className="blue">Get started</button>
-          <button className="gray">View on OpenSea</button>
+          <button className="blue" onClick={handleGetStarted} >Get started</button>
+          <button onClick={()=> window.open("https://opensea.io/collection/metarugs1", "_blank" )} className="gray">View on OpenSea</button>
         </div>
 
         <video autoPlay muted loop className="vedio" controls>
