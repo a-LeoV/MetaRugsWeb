@@ -76,6 +76,24 @@ export const networkCollections = {
       name: "Guitar Girlz",
       addrs: "0x8b4cf94751e9e9836763d3e8846a1ddf15ed7ffc",
     },
+    {
+      image:
+        "https://img.tofunft.com/image/https%3A%2F%2Fimg.tofunft.com%2Fipfs%2FQmUqwi7HMsKYRU9Y2WWMNmQ4jLBBiDSTU5mrbDmXbaBLDW%2F89.png/1440.png",
+      name: "RE: Guitar Girlz",
+      addrs: "0x2650b24eDaf512CDfc7ba0d077B0467e1Dc53D16",
+    },
+    {
+      image:
+        "https://img.tofunft.com/image/https%3A%2F%2Fimg.tofunft.com%2Fipfs%2FQmQG685Vr4QXi9qnh8vP3hnfV162XB125anEpfZNaPPUtR%2F115.png/1440.png",
+      name: "Fantom Witchez",
+      addrs: "0x6212dFf2981EEC5dd9104B00b1552f6640Ba6315",
+    },
+    {
+      image:
+        "https://img.tofunft.com/image/https%3A%2F%2Fimg.tofunft.com%2Fipfs%2FQmQma87NN7SRwXpn7PL2r7V2h5p1TBNmpu3Yo9JzDGpjTu%2F114.png/1440.png",
+      name: "Fantom Vampirez",
+      addrs: "0xd6f8D65811128755Fa0d2C011A1e865c18Cf8155",
+    },
   ],
 
   "0x1": [

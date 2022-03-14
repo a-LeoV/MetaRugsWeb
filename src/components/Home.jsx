@@ -344,7 +344,7 @@ export default function Home({ isServerInfo }) {
             alt=""
           />
           <p>
-            CEO of MetaRugs, crypto enthusiast since 2017, ETH miner, rug lover. aLeo idealized MetaRugs, co-directed Rugs design, manages the descentralized database, smartcontract and website coding and still finds time to shitpost on twitter.   
+            MetaRugs co-founder, crypto enthusiast since 2017, ETH miner, rug connoisseur. aLeo idealized MetaRugs, co-directed Rugs design and marketing, manages the descentralized database, smartcontract and website coding.
           </p>
           <img
             style={{

@@ -229,6 +229,7 @@ function Burn () {
           </>
         )}
         </div>
+        
 
       <div
         className="startup2"
@@ -242,6 +243,17 @@ function Burn () {
         Burn your CryptoRugs and get MetaRugs
         </h2>
         </div>
+        {/* remove me after sale starts */}
+          <div> <>
+            <Alert
+              message="WARNING: Sale is NOT active yet. Starts at March 25th."
+              type="error"
+            />
+            <div style={{ marginBottom: "10px" }}></div>
+          </>
+          </div>
+          {/* remove me after sale starts */}
+          
         
 
     <div  style={{ display: "flex", gap: "10px", maxWidth: "820px", flexWrap: "wrap", overflow: "hidden" }}>
