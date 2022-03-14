@@ -22,6 +22,7 @@ import "./style.css";
 import NFTMarketTransactions from "components/NFTMarketTransactions";
 import "./components/styles/home.css";
 import { FaDiscord } from "react-icons/fa";
+import { IoDiamond } from "react-icons/io5";
 import { BsTwitter, BsMedium } from "react-icons/bs";
 
 
@@ -165,6 +166,7 @@ function copyToClip() {
                 <BsMedium className="footer_s_icon" onClick={()=> window.open("https://medium.com/@Meta_Rugs", "_blank" )} />
                 <BsTwitter className="footer_s_icon" onClick={()=> window.open("https://twitter.com/MetaRugs", "_blank" )} />
                 <FaDiscord className="footer_s_icon" onClick={()=> window.open("https://discord.com/invite/3vnTdFEkBq", "_blank" )} />
+                <IoDiamond className="footer_s_icon" onClick={()=> window.open("https://raritysniper.com", "_blank" )} />
               </div>
               <div className="footer_items">
                 <a target="_blank" onClick={copyToClip}>Contact</a>
