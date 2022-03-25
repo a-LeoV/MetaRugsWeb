@@ -51,7 +51,7 @@ const styles = {
     border: "none",
     display: "flex",
     flex: "1",
-    width: "350px",
+    width: "100%",
     height: "130px",
     justifyContent: 'center',
     flexDirection: "column",
@@ -87,7 +87,7 @@ const styles = {
     border: "none",
     display: "flex",
     flex: "1",
-    width: "750px",
+    width: "100%",
     height: "130px",
     justifyContent: 'center',
     flexDirection: "column",
@@ -256,8 +256,8 @@ function Burn () {
           
         
 
-    <div  style={{ display: "flex", gap: "10px", maxWidth: "820px", flexWrap: "wrap", overflow: "hidden" }}>
-      <Card style={styles.card} title={<h1 style={styles.title}>📝 Approve MetaRugs</h1>}>
+    <div className=" card_container">
+      <Card className="card" title={<h1 style={styles.title}>📝 Approve MetaRugs</h1>}>
       <Button icon={<CheckOutlined />}
         style={ 
           isApproved == true
@@ -270,7 +270,7 @@ function Burn () {
       </Card>
       
       <div>
-        <Card style={styles.card} title={<h1 style={styles.title}>🔥 Burn all CryptoRugs</h1>}>
+        <Card  className="card" title={<h1 style={styles.title}>🔥 Burn all CryptoRugs</h1>}>
         <Button style={styles.buttons} icon={<FireOutlined />} 
         onClick={() => burn2mint_ALL_RUGS()}
         > Burn</Button>
@@ -281,13 +281,13 @@ function Burn () {
         MetaRugs are also mintable for ETH
         </h2>
      </div>
-   <div>     <Card style={styles.card2} title={<h1 style={styles.title}>Mint MetaRugs | 0.05 ETH</h1>}>
+   <div>     <Card className=" card2"  title={<h1 style={styles.title}>Mint MetaRugs | 0.05 ETH</h1>}>
      <div style={{ display: 'flex', justifyContent: 'center', alignItems: "center"}} >
        
      
      </div> 
     
-        <Button style={styles.buttons2} icon={<WalletOutlined />} 
+        <Button  style={styles.buttons2} icon={<WalletOutlined />} 
         onClick={() => mintArug(amountToMint)}
         > Mint</Button>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: "center", gap: "20px", padding: "25px"}} >

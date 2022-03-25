@@ -19,7 +19,6 @@ import NFTTokenIds from "components/NFTTokenIds";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
 import "./style.css";
-import NFTMarketTransactions from "components/NFTMarketTransactions";
 import "./components/styles/home.css";
 import { FaDiscord } from "react-icons/fa";
 import { IoDiamond } from "react-icons/io5";
@@ -27,6 +26,9 @@ import { BsTwitter, BsMedium } from "react-icons/bs";
 
 
 import Aos from 'aos';
+
+
+
 import 'aos/dist/aos.css'
 const { Header, Footer } = Layout;
 
@@ -45,28 +47,7 @@ const styles = {
     flexDirection:"column",
     width:"100%"
   },
-  header: {
-    position: "fixed",
-    zIndex: 1,
-    width: "100%",
-    background: "#151719",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    fontFamily: "Roboto, sans-serif",
-    borderBottom: "2px solid rgba(0, 0, 0, 0.06)",
-    padding: "0 10px",
-    boxShadow: "0 1px 10px rgb(151 164 175 / 10%)",
-  },
-  headerRight: {
-    display: "flex",
-    gap: "20px",
-    alignItems: "center",
-    fontSize: "15px",
-    fontWeight: "600",
-    whiteSpace: "nowrap",
-    color: "gray",
-  },
+
 };
 const App = ({ isServerInfo }) => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading, authenticate } =useMoralis();
@@ -98,20 +79,12 @@ function copyToClip() {
   return (
     <Layout >
       <Router>
-        <Header style={styles.header}>
+        <Header className="main_header">
           <Logo />
           <Menu
             theme="dark"
             mode="horizontal"
-            style={{
-              display: "flex",
-              fontSize: "17px",
-              fontWeight: "500",
-              marginLeft: "50px",
-              color: "#fff",
-              width: "100%",
-              justifyContent: "center",
-            }}
+            className="navbar_responsive"
             defaultSelectedKeys={["home"]}
           >
             <Menu.Item key="home">
@@ -129,7 +102,7 @@ function copyToClip() {
               <NavLink to="/Graveyard">⚰️ NFT Graveyard</NavLink>
             </Menu.Item>
           </Menu>
-          <div style={styles.headerRight}>
+          <div className="sub_header">
             <Chains />
             <NativeBalance />
             <Account />
@@ -188,7 +161,7 @@ function copyToClip() {
 export const Logo = () => (
   <div style={{ display: "flex" }}>
     <svg
-      width="96"
+      width="55"
       height="62"
       viewBox="0 0 400 411.911"
       version="1.1"

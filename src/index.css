@@ -53,7 +53,7 @@ img {
   display: block;
 }
 
-article > * + * {
+article>*+* {
   margin-top: 1em;
 }
 
@@ -63,14 +63,21 @@ textarea,
 select {
   font: inherit;
 }
-.ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub{
-  background: #151719!important;
+
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background: #151719 !important;
 }
-.ant-menu-horizontal > .ant-menu-item-selected a, .ant-menu-horizontal > .ant-menu-item a:hover{
-  color: #fff!important;
+
+.ant-menu-horizontal>.ant-menu-item-selected a,
+.ant-menu-horizontal>.ant-menu-item a:hover {
+  color: #fff !important;
 }
-.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected{
-  background: #595cfc!important;
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected,
+.ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background: #595cfc !important;
 }
 
 
@@ -86,11 +93,13 @@ select {
   -webkit-animation-duration: calc(var(--animate-duration) * 3);
   animation-duration: calc(var(--animate-duration) * 3);
 }
+
 :root {
   --animate-duration: 1s;
   --animate-delay: 1s;
   --animate-repeat: 1;
 }
+
 .animate__animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -104,7 +113,8 @@ select {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
-.animate__fadeInLittle{
+
+.animate__fadeInLittle {
   -webkit-animation-name: fadeInLittle;
   animation-name: fadeInLittle;
 }
@@ -122,6 +132,7 @@ select {
     transform: translate3d(0, 0, 0);
   }
 }
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -135,6 +146,7 @@ select {
     transform: translate3d(0, 0, 0);
   }
 }
+
 @-webkit-keyframes fadeInLittle {
   from {
     opacity: 0;
@@ -148,6 +160,7 @@ select {
     transform: translate3d(0, 0, 0);
   }
 }
+
 @keyframes fadeInLittle {
   from {
     opacity: 0;
@@ -175,6 +188,7 @@ select {
     transform: translate3d(0, 0, 0);
   }
 }
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -189,4 +203,120 @@ select {
   }
 }
 
+
+.navbar_responsive {
+  display: flex;
+  font-size: "17px";
+  font-weight: 500;
+  margin-left: 50px;
+  color: #fff;
+  width: 100%;
+  justify-content: center;
+}
+
+.sub_header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: gray;
+
+}
+.main_header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  background: #151719;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto, sans-serif;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+  padding: 0 10px;
+  box-shadow: 0 1px 10px rgb(151 164 175 / 10%);
+}
+.card_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 820px;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.card{
+  border: 1px solid #e7eaf3;
+  width: 400px;
+  height: 250px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #151719;
+}
+.card2{
+  border: 1px solid #e7eaf3;
+  width: 810px;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #151719;
+}
+@media only screen and (max-width: 600px) {
+  .navbar_responsive {
+    width: 20px;
+  }
+.main_header{
+  width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  gap: 15px;
+}
+.card_container{
+  flex-direction: column;
+}
+.card2{
+  border: 1px solid #e7eaf3;
+  width: 350px;
+  height: 300px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #151719;
+}
+  .sub_header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: gray;
+
+  }
+  .card{
+    border: 1px solid #e7eaf3;
+    width: 350px;
+    height: 250px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #151719;
+  }
+}
+
+.ant-menu-item .ant-menu-item-icon,
+.ant-menu-submenu-title .ant-menu-item-icon,
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-top: 29px;
+}
 

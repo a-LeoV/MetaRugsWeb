@@ -43,6 +43,7 @@
     color: white;
     font-size: 3.4rem;
     font-weight: 800;
+    text-align: center;
 }
 
 .startup2 .startup_blue {
@@ -51,7 +52,7 @@
 
 .startup2 h2 {
     color: #9ca9b3;
-    width: 60%;
+    width: 100%;
     text-align: center;
     font-weight: 400;
 }
@@ -59,9 +60,10 @@
 .burn {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     width: 100%;
     flex-direction: row;
+    gap: 20px;
 }
 
 .burn h1 {
@@ -76,10 +78,10 @@
 
 .burn h2 {
     color: #9ca9b3;
-    width: 54%;
+    width: 100%;
     text-align: right;
     font-weight: 400;
-    padding-right: 1rem;
+   margin-left: -50px;
 }
 
 .burnbutton_group {
@@ -445,12 +447,57 @@
 
 
 }
-
+.rug_card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+.h1_title{
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+    flex: 1;
+    color: white;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+    width: 100%;
+}
+.rug_card{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid white;
+}
+.navLink{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 28px;
+    font-weight: 600;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    -webkit-box-pack: start;
+    margin: 0 auto;
+    height: 55px;
+}
 @media only screen and (max-width: 600px) {
     .container {
         width: 590px;
     }
-
+.h1_title{
+    font-size: 15px;
+}
+.startup2 h1 {
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+.navLink{
+    font-size: 15px;
+}
     .startup h1 {
         color: white;
         font-size: 3rem;
@@ -458,7 +505,13 @@
         width: 100%;
         text-align: center;
     }
-
+    .burn {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+        flex-direction: column;
+    }
     .testimonials {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
