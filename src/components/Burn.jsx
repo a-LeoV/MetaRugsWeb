@@ -243,16 +243,7 @@ function Burn () {
         Burn your CryptoRugs and get MetaRugs
         </h2>
         </div>
-        {/* remove me after sale starts */}
-          <div> <>
-            <Alert
-              message="WARNING: Sale is NOT active yet. Starts at March 25th."
-              type="error"
-            />
-            <div style={{ marginBottom: "10px" }}></div>
-          </>
-          </div>
-          {/* remove me after sale starts */}
+       
           
         
 
