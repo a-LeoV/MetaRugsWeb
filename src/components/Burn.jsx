@@ -112,7 +112,7 @@ function Burn () {
     const isApprovedForAllFunction = "isApprovedForAll";
     const mintFunction = "mint";
     const [amountToMint, setAmount] = useState(null);
-    const pricePerMR = "50000000000000";
+    const pricePerMR = "50000000000000000";
     const [isApproved, setIsApproved] = useState(false);
     const SECOND_MS = 1000;
     
@@ -243,7 +243,7 @@ function Burn () {
         Burn your CryptoRugs and get MetaRugs
         </h2>
         </div>
-
+ 
           
         
 
