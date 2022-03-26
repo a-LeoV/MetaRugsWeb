@@ -243,7 +243,7 @@ function Burn () {
         Burn your CryptoRugs and get MetaRugs
         </h2>
         </div>
-       
+
           
         
 

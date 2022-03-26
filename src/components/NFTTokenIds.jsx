@@ -206,6 +206,16 @@ function NFTTokenIds({ inputValue, setInputValue }) {
         <h2>
         Change chains to browse whitelisted collections
         </h2>
+               {/* remove me after sale starts */}
+               <div> <>
+            <Alert
+              message="WARNING: NFT GRAVEYARD is not active yet"
+              type="error"
+            />
+            <div style={{ marginBottom: "10px" }}></div>
+          </>
+          </div>
+          {/* remove me after sale starts */}
         </div>
 
         </div>
