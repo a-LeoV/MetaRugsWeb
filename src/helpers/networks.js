@@ -1,5 +1,6 @@
 export const networkConfigs = {
   "0x1": {
+    chainId: 1,
     currencySymbol: "ETH",
     blockExplorerUrl: "https://etherscan.io/",
     wrapped: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
@@ -71,14 +72,14 @@ export const networkConfigs = {
     rpcUrl: "https://rpc-mumbai.matic.today/",
     blockExplorerUrl: "https://mumbai.polygonscan.com/",
   },
-  "0x89": {
+  "0xfa": {
     chainId: 250,
     chainName: "Fantom Opera",
     currencyName: "Fantom",
     currencySymbol: "FTM",
     rpcUrl: "https://rpc.ftm.tools/",
     blockExplorerUrl: "https://ftmscan.com/",
-    mktPlaceUrl: "https://artion.io/explore/"
+    mktPlaceUrl: "https://paintswap.finance/marketplace/assets/"
   },
 };
 

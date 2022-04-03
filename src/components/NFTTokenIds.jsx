@@ -280,6 +280,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
             NFTCollections?.map((nft, index) => (
               <Card
                 hoverable
+                onClick={() => setInputValue(nft?.addrs)}
                 actions={[
                   <Tooltip title="View Collection">
                     <RightCircleOutlined
@@ -308,6 +309,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
               NFTTokenIds.slice(0, 20).map((nft, index) => (
               <Card
                 hoverable
+                onClick={() => handleBuyClick(nft)}
                 actions={[
                   <Tooltip title="View On Blockexplorer">
                     <FileSearchOutlined
@@ -319,7 +321,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
                       }
                     />
                   </Tooltip>,
-                      <Tooltip title="View On OpenSea">
+                      <Tooltip title="View On Market Place">
                       <SearchOutlined
                         onClick={() =>
                           window.open(

@@ -42,7 +42,7 @@ function Account() {
     return (
       <div
         style={styles.account}
-        onClick={() => handleAuth({ signingMessage: "Hello my rugged fella" }) }
+        onClick={() => handleAuth({ signingMessage: "Hello rugged fam" }) }
       >
         <p style={styles.text}>Connect wallet</p>
       </div>

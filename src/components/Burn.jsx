@@ -1,8 +1,9 @@
 import { useMoralisDapp } from "providers/MoralisDappProvider/MoralisDappProvider";
 import { useMoralis } from "react-moralis";
 import { useWeb3ExecuteFunction, useMoralisWeb3ApiCall } from "react-moralis";
-import { Card, Button, InputNumber, Typography, Alert } from "antd";
+import { Card, Button, InputNumber, Typography, Alert, Modal } from "antd";
 import React, { useState, useEffect } from "react";
+import { getChainById } from "helpers/networks";
 import { FireOutlined, CheckOutlined, WalletOutlined } from "@ant-design/icons";
 import "./styles/home.css";
 
@@ -107,6 +108,7 @@ function Burn () {
     const contractProcessor = useWeb3ExecuteFunction();
     const crContractABIJson = JSON.parse(crContractABI);
     const mrContractABIJson = JSON.parse(mrContractABI);
+    const [loading, setLoading] = useState(false);
     const setApprovalForAllFunction = "setApprovalForAll";
     const burn2mint_ALL_RUGSFunction = "burn2mint_ALL_RUGS";
     const isApprovedForAllFunction = "isApprovedForAll";
@@ -114,7 +116,7 @@ function Burn () {
     const [amountToMint, setAmount] = useState(null);
     const pricePerMR = "50000000000000000";
     const [isApproved, setIsApproved] = useState(false);
-    const SECOND_MS = 1000;
+    const SECOND_MS = 100;
     
     async function callIsApproved(){
       
@@ -157,13 +159,16 @@ function Burn () {
           await contractProcessor.fetch({
             params: ops,
             onSuccess: () => {
-                alert("Burn 2 Mint is approved")
+              console.log("Approval Received");
+              setLoading(false);
+              succApprove();
             },
             onError: (error) => {
-              alert(JSON.stringify(error))
+              setLoading(false);
+              failApprove();
             },
-        })
-      }
+          });
+        }
 
     
     async function burn2mint_ALL_RUGS(){
@@ -179,13 +184,16 @@ function Burn () {
       await contractProcessor.fetch({
           params: ops,
           onSuccess: () => {
-              alert("All your CryptoRugs were burned successfully - MetaRugs minted")
+            console.log("CryptoRugs burned successfully - MetaRugs minted");
+            setLoading(false);
+            succBurn();
           },
           onError: (error) => {
-              alert(JSON.stringify(error))
+            setLoading(false);
+            failBurn();
           },
-      })
-    }
+        });
+      }
 
       async function mintArug(amount) {
         const p = String(amount * pricePerMR);
@@ -202,16 +210,84 @@ function Burn () {
         await contractProcessor.fetch({
             params: ops,
             onSuccess: () => {
-                alert("MetaRugs minted")
+              console.log("MetaRugs minted!");
+              setLoading(false);
+              succMint();
             },
             onError: (error) => {
-              alert(JSON.stringify(error))
-            }
-        })
-      }
+              setLoading(false);
+              failMint();
+            },
+          });
+        }
 
       function onChange(value) {
         setAmount(value);
+      }
+
+      function succBurn() {
+        let secondsToGo = 5;
+        const modal = Modal.success({
+          title: "Success!",
+          content: `CryptoRugs burned successfully - MetaRugs minted`,
+        });
+        setTimeout(() => {
+          modal.destroy();
+        }, secondsToGo * 1000);
+      }
+
+      function succMint() {
+        let secondsToGo = 5;
+        const modal = Modal.success({
+          title: "Success!",
+          content: `MetaRugs minted!`,
+        });
+        setTimeout(() => {
+          modal.destroy();
+        }, secondsToGo * 1000);
+      }
+
+      function failBurn() {
+        let secondsToGo = 5;
+        const modal = Modal.error({
+          title: "Error!",
+          content: `There was a problem burning your NFT`,
+        });
+        setTimeout(() => {
+          modal.destroy();
+        }, secondsToGo * 1000);
+      }
+      function failMint() {
+        let secondsToGo = 5;
+        const modal = Modal.error({
+          title: "Error!",
+          content: `There was a problem minting your MetaRugs`,
+        });
+        setTimeout(() => {
+          modal.destroy();
+        }, secondsToGo * 1000);
+      }
+
+      function succApprove() {
+        let secondsToGo = 5;
+        const modal = Modal.success({
+          title: "Success!",
+          content: `Approval is now set, you may burn your CryptoRugs`,
+        });
+        setTimeout(() => {
+          modal.destroy();
+        }, secondsToGo * 1000);
+      }
+
+      function failApprove() {
+        let secondsToGo = 5;
+        const modal = Modal.error({
+          title: "Error!",
+          content: `There was a problem with setting approval`,
+        });
+        setTimeout(() => {
+          modal.destroy();
+        }, secondsToGo * 1000);
       }
 
 
@@ -228,6 +304,17 @@ function Burn () {
             <div style={{ marginBottom: "10px" }}></div>
           </>
         )}
+        <div style={styles.NFTs}>
+        {getChainById(chainId) != "1" && (
+          <>
+            <Alert
+              message="Connect to Ethereum mainnet to burn CryptoRugs and mint MetaRugs"
+              type="error"
+            />
+            <div style={{ marginBottom: "10px" }}></div>
+          </>
+        )}
+        </div>
         </div>
         
 
@@ -262,9 +349,15 @@ function Burn () {
       
       <div>
         <Card  className="card" title={<h1 style={styles.title}>🔥 Burn all CryptoRugs</h1>}>
-        <Button style={styles.buttons} icon={<FireOutlined />} 
+        <Button icon={<FireOutlined />} 
+         style={ 
+          isApproved == false
+            ? styles.disabledButtons
+            : styles.buttons
+      }
         onClick={() => burn2mint_ALL_RUGS()}
-        > Burn</Button>
+        disabled={isApproved == false}
+        > {isApproved ? "Burn" : "Approve to Burn"}</Button>
         </Card>
         </div>
         <div className="startup2" >

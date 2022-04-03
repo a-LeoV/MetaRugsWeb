@@ -4,7 +4,7 @@ import { Card, Image, Tooltip, Modal, Alert, Spin, Button } from "antd";
 import { useRUGBalance2 } from "hooks/useRUGBalance2";
 import { FileSearchOutlined, FireOutlined } from "@ant-design/icons";
 import { useMoralisDapp } from "providers/MoralisDappProvider/MoralisDappProvider";
-import { getExplorer } from "helpers/networks";
+import { getExplorer, getChainById } from "helpers/networks";
 import { useWeb3ExecuteFunction } from "react-moralis";
 import altRug from "./Images/CryptoRugsUnrevealed.jpg";
 import "./styles/home.css";
@@ -128,7 +128,7 @@ function RUGBalance() {
   const crContractABIJson = JSON.parse(crContractABI);
   const mrContractABIJson = JSON.parse(mrContractABI);
   const [isApproved, setIsApproved] = useState(false);
-  const SECOND_MS = 1000;
+  const SECOND_MS = 100;
 
   useEffect(() => {
     async function callIsApproved() {
@@ -229,7 +229,7 @@ function RUGBalance() {
     let secondsToGo = 5;
     const modal = Modal.success({
       title: "Success!",
-      content: `Approval is now set, you may burn your RUG`,
+      content: `Approval is now set, you may burn your CryptoRugs`,
     });
     setTimeout(() => {
       modal.destroy();
@@ -240,7 +240,7 @@ function RUGBalance() {
     let secondsToGo = 5;
     const modal = Modal.error({
       title: "Error!",
-      content: `There was a problem listing your NFT`,
+      content: `There was a problem burning your NFT`,
     });
     setTimeout(() => {
       modal.destroy();
@@ -280,6 +280,18 @@ function RUGBalance() {
             <div style={{ marginBottom: "10px" }}></div>
           </>
         )}
+        </div>
+         <div style={styles.NFTs}>
+         {getChainById(chainId) != "1" && (
+          <>
+            <Alert
+              message="Connect to Ethereum mainnet to burn CryptoRugs and mint MetaRugs"
+              type="error"
+            />
+            <div style={{ marginBottom: "10px" }}></div>
+          </>
+        )}
+        
       </div>
 
       <div className="home container">
@@ -401,7 +413,9 @@ function RUGBalance() {
             >
               {isApproved ? "Approved" : "Approve"}
             </Button>,
-            <Button onClick={() => burn2mint_ONE_RUG(nftToBurn)} type="primary">
+            <Button 
+            disabled={isApproved === false}
+            onClick={() => burn2mint_ONE_RUG(nftToBurn)} type="primary">
               Burn
             </Button>,
           ]}
