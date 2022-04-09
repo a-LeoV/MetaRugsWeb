@@ -14,6 +14,7 @@ import Chains from "components/Chains";
 import Home from "components/Home";
 import { Menu, Layout } from "antd";
 import Burn from "components/Burn";
+import MR2 from "components/MR2";
 import RUGBalance from "components/RUGBalance2";
 import NFTTokenIds from "components/NFTTokenIds";
 import "antd/dist/antd.css";
@@ -53,6 +54,7 @@ const App = ({ isServerInfo }) => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading, authenticate } =useMoralis();
     useMoralis();
   const [inputValue, setInputValue] = useState("explore");
+  const [ERC20Value, setERC20Value] = useState("0xD95EAE66401723e11d1bE0a52b4F4f53F314e6CD");
   
   useEffect(() => {
    
@@ -101,6 +103,9 @@ function copyToClip() {
             <Menu.Item key="graveyard" onClick={() => setInputValue("explore")} >
               <NavLink to="/Graveyard">⚰️ NFT Graveyard</NavLink>
             </Menu.Item>
+            <Menu.Item key="MR2" onClick={() => setERC20Value("0xD95EAE66401723e11d1bE0a52b4F4f53F314e6CD")} >
+              <NavLink to="/MR2">♻️ MetaRugs 2.0</NavLink>
+            </Menu.Item>
           </Menu>
           <div className="sub_header">
             <Chains />
@@ -121,6 +126,9 @@ function copyToClip() {
             </Route>
             <Route path="/Graveyard">
               <NFTTokenIds inputValue={inputValue} setInputValue={setInputValue} />
+            </Route>
+            <Route path="/MR2">
+              <MR2 ERC20Value={ERC20Value} setERC20Value={setERC20Value} />
             </Route>
           </Switch>
           <Redirect to="/Home" />

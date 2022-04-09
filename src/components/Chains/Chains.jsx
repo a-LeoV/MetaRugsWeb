@@ -85,6 +85,11 @@ const menuItems = [
     value: "Fantom",
     icon: <FantomLogo />,
   },
+  {
+    key: "0xfa2",
+    value: "FTM Testnet",
+    icon: <FantomLogo />,
+  },
 ];
 
 function Chains() {

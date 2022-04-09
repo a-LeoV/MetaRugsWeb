@@ -42,7 +42,7 @@ export const networkCollections = {
       image:
         "https://lh3.googleusercontent.com/x4B7M-QDK2jSp1IjWJZiRE87xqQpewE1W1eTxoqcDchkLMG8faiqEFaO0R2CledHsRk9hOyBM-vLNUIl2l2Y6kFVUoUEjemksOzBDw=s0",
       name: "CryptoRugs",
-      addrs: "0xBe169ba8097583318A84014657eEcB5b32b283B8",
+      addrs: "0xFDAd92d834f1faee59F0B5506C08Ed8Bf4c85491",
     },
   ],
   
@@ -93,6 +93,21 @@ export const networkCollections = {
         "https://img.tofunft.com/image/https%3A%2F%2Fimg.tofunft.com%2Fipfs%2FQmQma87NN7SRwXpn7PL2r7V2h5p1TBNmpu3Yo9JzDGpjTu%2F114.png/1440.png",
       name: "Fantom Vampirez",
       addrs: "0xd6f8D65811128755Fa0d2C011A1e865c18Cf8155",
+    },
+    {
+      image:
+        "https://storage.googleapis.com/cdn.nftkey.app/nft-collections/roompixes/0x1ff7e609c47aa3c4da9af49fa5232bdb36d4554c83ee43fa13b79103ff21e5d6",
+      name: "Roompixies",
+      addrs: "0x32e13161E30acD5CEe7919bA8B07C2543f50f936",
+    },
+  ],
+  "0xfa2": [
+   // Fantom Testnet
+    {
+      image:
+        "https://lh3.googleusercontent.com/x4B7M-QDK2jSp1IjWJZiRE87xqQpewE1W1eTxoqcDchkLMG8faiqEFaO0R2CledHsRk9hOyBM-vLNUIl2l2Y6kFVUoUEjemksOzBDw=s0",
+      name: "CryptoRugs test",
+      addrs: "0xB9a0AbFC7cB29A22F70F52c39278e243271602e2",
     },
   ],
 

@@ -45,7 +45,7 @@ export default function Home({ isServerInfo }) {
           Welcome to <span className="startup_blue">MetaRugs</span>
         </h1>
         <h2>
-        A Never-ending NFT collection of 3D rugs immortalizing notable crypto exploits, hacks and rug pulls.
+        Never-ending NFT collections of 3D rugs, immortalizing notable crypto exploits, hacks and rug pulls.
         </h2>
         <h2>
         We don't love the rugs -- We remember them.

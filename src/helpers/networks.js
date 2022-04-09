@@ -81,6 +81,15 @@ export const networkConfigs = {
     blockExplorerUrl: "https://ftmscan.com/",
     mktPlaceUrl: "https://paintswap.finance/marketplace/assets/"
   },
+  "0xfa2": {
+    chainId: 4002,
+    chainName: "Fantom Testnet",
+    currencyName: "Fantom",
+    currencySymbol: "FTM",
+    rpcUrl: "https://rpc.testnet.fantom.network",
+    blockExplorerUrl: "https://testnet.ftmscan.com/",
+    mktPlaceUrl: "https://testnet.operahouse.online/"
+  },
 };
 
 export const getNativeByChain = (chain) =>
