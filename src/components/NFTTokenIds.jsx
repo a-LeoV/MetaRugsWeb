@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getNativeByChain } from "helpers/networks";
-import { getCollectionsByChain } from "helpers/collections";
+import { getCollectionsByChain, getAddrs } from "helpers/collections";
 import {
   useMoralis,
   useMoralisQuery,
@@ -74,7 +74,7 @@ function NFTTokenIds({ inputValue, setInputValue }) {
   const [nftToBury, setnftToBury] = useState(null);
   const [loading, setLoading] = useState(false);
   const contractProcessor = useWeb3ExecuteFunction();
-  const RUGDProcessor = useAPIContract();
+  const RUGDProcessor = useWeb3ExecuteFunction();
   const ItemImage = Moralis.Object.extend("ItemImages");
   const { chainId, marketAddress, contractABI, walletAddress, crTestAddress, mrAddress, crTestContractABI, GraveAddress, GraveContractABI } =
     useMoralisDapp();
@@ -84,9 +84,8 @@ function NFTTokenIds({ inputValue, setInputValue }) {
   const nativeName = getNativeByChain(chainId);
   const contractABIJson = JSON.parse(contractABI);
   const [isApproved, setIsApproved] = useState(false);
-  const [RUGDReward, setRUGDReward] = useState(null);
-  const SECOND_MS = 100;
-  const SECOND_MSReward = 1000;
+  const SECOND_MS = 150;
+  const SECOND_MSReward = 30;
   const queryMarketItems = useMoralisQuery("MarketItems");
   const fetchMarketItems = JSON.parse(
     JSON.stringify(queryMarketItems.data, [
@@ -126,39 +125,32 @@ function NFTTokenIds({ inputValue, setInputValue }) {
 }
 
 useEffect(() => {
+  if (isApproved === false){
   const interval = setInterval(() => {
     callIsApproved();
   }, SECOND_MS);
- 
+
    return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
- }, [callIsApproved])
+ }}, [callIsApproved])
+
   
- async function calculateRUGDReward(){
-      
+ async function calculateRUGDReward(nftaddrs){
+   
   const options = {
-    chain: chainId,
-    address: GraveAddress,
-    function_name: calculateRewardFunction,
+    
     abi: GraveContractABIJson,
+    contractAddress: GraveAddress,
+    functionName: calculateRewardFunction,
+    chain: chainId,
     params: {
-      _project: crTestAddress,
+      _project: nftaddrs,
     },
   };
   await RUGDProcessor.fetch({
     params: options,
-    onSuccess: () => {
-      setRUGDReward(RUGDProcessor.contractResponse)
-    },
-})
+ 
+  })
 }
-
-useEffect(() => {
-const interval = setInterval(() => {
-  calculateRUGDReward();
-}, SECOND_MSReward);
-
- return () => clearInterval(interval); // This represents the unmount function, in which you need to clear your interval to prevent memory leaks.
-}, [calculateRUGDReward])
 
 
   async function setApprovalForAll() {
@@ -479,7 +471,15 @@ const interval = setInterval(() => {
                 }
                 key={index}
               >
-                <Meta title={nft.name} />
+               <Meta title={nft.name}
+                />       
+                <Badge.Ribbon
+                  color="green"
+                  text={`${
+                    () => calculateRUGDReward(nft.addrs).data / ("1e" + 18)
+                  } ${"RUGD"}`}
+                  
+                ></Badge.Ribbon>
               </Card>
             ))}
 
@@ -530,7 +530,7 @@ const interval = setInterval(() => {
                 <Badge.Ribbon
                   color="green"
                   text={`${
-                    RUGDReward / ("1e" + 18)
+                    RUGDProcessor.data / ("1e" + 18)
                   } ${"RUGD"}`}
                 ></Badge.Ribbon>
 

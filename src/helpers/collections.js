@@ -141,3 +141,4 @@ export const networkCollections = {
 };
 
 export const getCollectionsByChain = (chain) => networkCollections[chain];
+export const getAddrs = (chain) => networkCollections[chain]?.addrs;
